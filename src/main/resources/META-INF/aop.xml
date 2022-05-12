@@ -1,0 +1,12 @@
+<!DOCTYPE aspectj PUBLIC
+        "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd">
+<aspectj>
+    <aspects>
+        <!-- ①切面类 -->
+        <aspect name="com.wahson.aspects.OkHttpRequestAspect"/>
+    </aspects>
+    <weaver options="-showWeaveInfo -verbose">
+        <!-- ② 指定需要进行织入操作的目标类范围 -->
+        <include within="okhttp3..*" />
+    </weaver>
+</aspectj>
